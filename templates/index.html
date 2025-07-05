@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Bienvenido a StudentOverflow{% endblock %}
+
+{% block content %}
+<div class="hero-section text-center py-5 mb-5">
+    <div class="container">
+        <h1 class="display-4 mb-4">
+            <i class="fas fa-graduation-cap text-primary"></i>
+            Bienvenido a StudentOverflow
+        </h1>
+        <p class="lead mb-4">
+            La plataforma donde estudiantes ayudan a estudiantes. 
+            Haz preguntas, comparte conocimiento y aprende junto a tu comunidad académica.
+        </p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg me-3">
+                    <i class="fas fa-user-plus"></i> Registrarse
+                </a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-question-circle fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Haz Preguntas</h5>
+                <p class="card-text">
+                    ¿Tienes dudas con alguna materia? Publica tu pregunta y obtén ayuda de otros estudiantes.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-lightbulb fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Comparte Conocimiento</h5>
+                <p class="card-text">
+                    Ayuda a otros estudiantes respondiendo sus preguntas y compartiendo tu experiencia.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Comunidad</h5>
+                <p class="card-text">
+                    Únete a una comunidad de estudiantes que se apoyan mutuamente en su aprendizaje.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-info-circle"></i> ¿Cómo funciona?
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <div class="step-number">1</div>
+                        <h6>Regístrate</h6>
+                        <p>Crea tu cuenta gratuita</p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="step-number">2</div>
+                        <h6>Haz preguntas</h6>
+                        <p>Publica tus dudas académicas</p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="step-number">3</div>
+                        <h6>Recibe ayuda</h6>
+                        <p>Otros estudiantes responderán</p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="step-number">4</div>
+                        <h6>Ayuda a otros</h6>
+                        <p>Comparte tu conocimiento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

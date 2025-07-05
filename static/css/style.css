@@ -1,0 +1,220 @@
+/* Estilos generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar personalizada */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    margin-right: 0.5rem;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Tarjetas */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Pasos del proceso */
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0 auto 1rem;
+}
+
+/* Estadísticas de preguntas */
+.question-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat .badge {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.stat small {
+    font-size: 0.75rem;
+}
+
+/* Meta información de preguntas */
+.question-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.question-meta .badge {
+    font-size: 0.75rem;
+}
+
+/* Formularios */
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Botones */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-info {
+    background-color: #e7f3ff;
+    color: #0c5460;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    background-color: #343a40 !important;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .question-stats {
+        margin-bottom: 1rem;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Utilidades */
+.text-decoration-none:hover {
+    text-decoration: underline !important;
+}
+
+.badge {
+    font-size: 0.8rem;
+}
+
+/* Mejoras para accesibilidad */
+.btn:focus,
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo para enlaces en preguntas */
+.question-title {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.question-title:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

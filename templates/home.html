@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - StudentOverflow{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-home"></i> Preguntas Recientes</h2>
+            <a href="{{ url_for('ask_question') }}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Hacer Pregunta
+            </a>
+        </div>
+        
+        {% if questions %}
+        {% for question in questions %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <div class="question-stats">
+                            <div class="stat">
+                                <span class="badge bg-secondary">{{ question.answers|length }}</span>
+                                <small class="text-muted">respuestas</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="card-title">
+                            <a href="{{ url_for('view_question', id=question.id) }}" class="text-decoration-none">
+                                {{ question.title }}
+                            </a>
+                        </h5>
+                        <p class="card-text">{{ question.content[:150] }}{% if question.content|length > 150 %}...{% endif %}</p>
+                        <div class="question-meta">
+                            <span class="badge bg-primary">{{ question.subject }}</span>
+                            <small class="text-muted ms-2">
+                                Por <strong>{{ question.author.username }}</strong>
+                                el {{ question.created_at.strftime('%d/%m/%Y %H:%M') }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="text-center py-5">
+            <i class="fas fa-question-circle fa-3x text-muted mb-3"></i>
+            <h4>No hay preguntas aún</h4>
+            <p class="text-muted">¡Sé el primero en hacer una pregunta!</p>
+            <a href="{{ url_for('ask_question') }}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Hacer la primera pregunta
+            </a>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-user"></i> ¡Hola, {{ current_user.username }}!</h5>
+            </div>
+            <div class="card-body">
+                <p>Bienvenido de vuelta a StudentOverflow</p>
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('ask_question') }}" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Hacer Pregunta
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mt-3">
+            <div class="card-header">
+                <h6><i class="fas fa-info-circle"></i> Materias Populares</h6>
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary">Matemáticas</span>
+                    <span class="badge bg-success">Física</span>
+                    <span class="badge bg-info">Química</span>
+                    <span class="badge bg-warning">Historia</span>
+                    <span class="badge bg-danger">Programación</span>
+                    <span class="badge bg-secondary">Inglés</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

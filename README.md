@@ -1,55 +1,69 @@
-studentOverflow
+# StudentOverflow
+
 Portal web que permite a los usuarios hacer preguntas académicas para que otros usuarios de la plataforma puedan ayudarlos. Inspirado en StackOverflow pero enfocado en materias estudiantiles.
-Características
 
-Sistema de preguntas y respuestas
-Autenticación de usuarios
-Calificación de respuestas
-Comentarios en preguntas y respuestas
-Búsqueda de preguntas por materia
+## Características
 
-Tecnologías utilizadas
+- Sistema de preguntas y respuestas
+- Autenticación de usuarios
+- Calificación de respuestas
+- Comentarios en preguntas y respuestas
+- Búsqueda de preguntas por materia
 
-Backend: Python con Flask
-Base de datos: SQLite (SQLAlchemy)
-Frontend: HTML, CSS, JavaScript
-Autenticación: Flask-Login
-Formularios: Flask-WTF
+## Tecnologías utilizadas
 
-Instalación
-Requisitos previos
+- **Backend**: Python con Flask
+- **Base de datos**: SQLite (SQLAlchemy)
+- **Frontend**: HTML, CSS, JavaScript
+- **Autenticación**: Flask-Login
+- **Formularios**: Flask-WTF
 
-Python 3.8 o superior
-Git
+## Instalación
 
-Pasos para ejecutar el proyecto
+### Requisitos previos
+- Python 3.8 o superior
+- Git
 
-Clonar el repositorio
+### Pasos para ejecutar el proyecto
 
-bashgit clone https://github.com/Yolotzin89/studentOverflow.git
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/Yolotzin89/studentOverflow.git
 cd StudentOverflow
+```
 
-Crear entorno virtual
+2. **Crear entorno virtual**
+```bash
+python -m venv venv
+```
 
-bashpython -m venv venv
-
-Activar entorno virtual
-
-bash# Windows
+3. **Activar entorno virtual**
+```bash
+# Windows
 venv\Scripts\activate
 
-Instalar dependencias
+# Mac/Linux
+source venv/bin/activate
+```
 
-bashpip install -r requirements.txt
+4. **Instalar dependencias**
+```bash
+pip install -r requirements.txt
+```
 
-Ejecutar la aplicación
+5. **Ejecutar la aplicación**
+```bash
+python app.py
+```
 
-bashpython app.py
-
-Abrir en navegador
-
+6. **Abrir en navegador**
+```
 http://localhost:5000
-Estructura del proyecto
+```
+
+## Estructura del proyecto
+
+```
 StudentOverflow/
 ├── app.py                 # Archivo principal de la aplicación
 ├── requirements.txt       # Dependencias del proyecto
@@ -67,23 +81,28 @@ StudentOverflow/
 │   └── home.html
 └── documentation/        # Documentación del proyecto
     └── db/              # Documentación de base de datos
-Uso
+```
 
-Registrarse: Crear una cuenta nueva
-Iniciar sesión: Acceder con credenciales
-Hacer preguntas: Crear nuevas preguntas académicas
-Responder: Ayudar a otros usuarios con respuestas
-Calificar: Votar por las mejores respuestas
+## Uso
 
-Contribuir
+1. **Registrarse**: Crear una cuenta nueva
+2. **Iniciar sesión**: Acceder con credenciales
+3. **Hacer preguntas**: Crear nuevas preguntas académicas
+4. **Responder**: Ayudar a otros usuarios con respuestas
+5. **Calificar**: Votar por las mejores respuestas
 
-Fork el proyecto
-Crea una rama para tu feature (git checkout -b feature/AmazingFeature)
-Commit tus cambios (git commit -m 'Add some AmazingFeature')
-Push a la rama (git push origin feature/AmazingFeature)
-Abre un Pull Request
+## Contribuir
 
-Autor
+1. Fork el proyecto
+2. Crea una rama para tu feature 
+3. Commit tus cambios 
+4. Push a la rama 
+5. Abre un Pull Request
+
+## Autor
+
 Yolotzin J. V. R.
-Licencia
-Este proyecto está bajo la Licencia MIT - mira el archivo LICENSE para más detalles.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
